@@ -1,0 +1,148 @@
+@use "../abstract/mixins";
+@use "../abstract/variaveis";
+
+.cabecalho {
+    display: flex;
+    flex-direction: column;
+    height: 25rem;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    @include mixins.ff-fs-cl-ftw(variaveis.$ftf-1, variaveis.$fts-1, variaveis.$cl-1, 600);
+}
+
+.cabecalho :nth-child(1) {
+    color: variaveis.$cl-red;
+}
+
+.cabecalho :nth-last-child(2) {
+    color: #101828;
+    ;
+}
+
+.cabecalho :nth-child(3) {
+    width: 49.5rem;
+}
+
+.metric_item ul {
+    display: flex;
+    flex-direction: row;
+    gap: 64px;
+    justify-content: center;
+}
+
+.metric_item li {
+    display: flex;
+    flex-direction: column;
+    width: 17.5rem;
+    height: 12rem;
+    gap: 20px;
+    text-decoration: none;
+    @include mixins.ff-fs-cl-ftw(variaveis.$ftf-1, variaveis.$fts-1, variaveis.$cl-1, 600)
+}
+
+.metric_item li :nth-child(1) {
+    width: 600;
+    color: variaveis.$cl-red;
+    font-size: 60px;
+}
+
+.metric_item li :nth-child(2) {
+    width: 500;
+    color: #101828;
+    font-size: 18px;
+}
+
+.vagas {
+    display: flex;
+    flex-direction: column;
+    // height: 602px;
+    justify-content: end;
+    align-items: center;
+    gap: 10px;
+    margin: 10rem 0 0 0;
+    @include mixins.ff-fs-cl-ftw(variaveis.$ftf-1, variaveis.$fts-1, variaveis.$cl-1, 500)
+}
+
+.vagas :nth-child(1) {
+    display: flex;
+    color: variaveis.$cl-red;
+    font-size: 14px;
+    background-color: rgba(142, 36, 36, 0.05);
+    width: 7.82rem;
+    height: 1.75rem;
+    justify-content: center;
+    align-items: center;
+    border-radius: 16px;
+}
+
+.vagas :nth-child(2) {
+    color: #101828;
+    font-size: 36px;
+    font-weight: 600;
+}
+
+.vagas :nth-child(3) {
+    font-size: 20px;
+    font-weight: 400;
+}
+
+.vagas img {
+    width: 80%;
+    margin: 5rem 0 0 0;
+}
+
+.vagas_abertas {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    margin: 5% 10%;
+    gap: 20px;
+    font-family: variaveis.$ftf-1;
+    @include mixins.ff-fs-cl-ftw(variaveis.$ftf-1, 20px, variaveis.$cl-1, 500);
+
+    h3 {
+        color: #101828;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        padding: 0 0 0 15%;
+        gap: 50px;
+    }
+
+}
+
+.container_design1 {
+    display: flex;
+    flex-direction: column;
+    width: 768px;
+    height: 136px;
+    justify-content: center;
+    border: 1px solid variaveis.$cl-1;
+    border-radius: 1rem;
+    gap: 30px;
+    padding: 2%;
+
+    h4 {
+        @extend h3;
+        font-size: 18px;
+    }
+
+    span {
+        display: flex;
+        flex-direction: row;
+        font-size: 1rem;
+        gap: 10px
+    }
+}
+
+.container_dev {
+    @extend .container;
+}
+    
+    .container_dev1 {
+        @extend .container_design1;
+    }

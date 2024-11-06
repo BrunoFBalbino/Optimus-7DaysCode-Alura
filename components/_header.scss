@@ -1,0 +1,48 @@
+@use "../abstract/variaveis";
+@use "../abstract/mixins";
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2%;
+    
+    .pags{
+        display: flex;
+        flex-direction: row;
+        @include mixins.ff-fs-cl-ftw(variaveis.$ftf-1,variaveis.$fts-1, variaveis.$cl-1, 500);
+        gap: 40px;
+    }
+    
+    .square {
+        width: 142px;
+    }
+    
+    .button button{
+        gap: 12px;
+        @include mixins.ff-fs-cl-ftw(variaveis.$ftf-1,variaveis.$fts-1, variaveis.$cl-1, 500);
+        width: 5.18rem;
+        height: 2.75rem;
+        border-radius: 0.5rem;
+        &:active{
+            background-color: rgb(241, 241, 241);
+        }
+    }
+    
+    .button :nth-child(2){
+        color: white;
+        width: 7rem;
+        height: 2.75rem;
+        background-color: variaveis.$cl-red;
+        border: none;
+        
+        &:active{
+            background-color: #501616;
+        }
+     
+    }
+}
+
+header img{
+    width: 7.07rem;
+}

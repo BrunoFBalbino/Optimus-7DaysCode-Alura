@@ -1,0 +1,6 @@
+@mixin ff-fs-cl-ftw($ft-family, $ft-size, $cl-color, $ft-weight){
+    font-family: $ft-family;
+    font-size: $ft-size;
+    color: $cl-color;
+    font-weight: $ft-weight;
+}
